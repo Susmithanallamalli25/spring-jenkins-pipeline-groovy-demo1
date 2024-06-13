@@ -62,11 +62,15 @@
                  withCredentials([usernamePassword(credentialsId:'dockerHub',passwordVariable:'dockerHubPassword',usernameVariable:'dockerHubUser')]){
                  bat "docker login -u ${env.dockerHubUser} -p ${env.dockerHubPassword}"
                  bat "docker push susmithanallamalli123/spring-jenkins-ci-cd:latest"
-                 }
+                        
+                     }      
+                }
             }
         }
+     
+    
 
-    }
+    
 
      post {
                 // If Maven was able to run the tests, even if some of the test
@@ -83,6 +87,7 @@
 
                 }
             }
+ }
 
             
-}
+
