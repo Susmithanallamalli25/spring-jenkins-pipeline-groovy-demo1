@@ -12,7 +12,7 @@ pipeline {
         stage('Build') {
             steps {
                 // Get some code from a GitHub repository
-                git url: 'https://github.com/Susmithanallamalli25/spring-jenkins-pipeline-groovy-demo1.git'
+                git url: 'https://github.com/krishnamurthypradeep/spring-jenkins-pipeline-groovy-demo1.git'
 
                 // Run Maven on a Unix agent.
                 script{
@@ -43,7 +43,20 @@ pipeline {
             }
         
     	}
-    	
+    	stage ('Docker Build') {
+            steps {
+                script{
+                if(isUnix()){
+                sh "docker build -t susmithanallamalli123/spring-jenkins-ci-cd:latest ."
+				}	
+                else{
+                 bat "docker build -t susmithanallamalli123/spring-jenkins-ci-cd:latest ."
+                 }
+                 }
+            }
+        
+    	}
+
     	
     	
     	
