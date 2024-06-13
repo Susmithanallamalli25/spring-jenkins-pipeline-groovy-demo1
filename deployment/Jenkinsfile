@@ -70,7 +70,7 @@
         stage ('Deploy to K8s Cluster'){
             steps{
                 script{
-                    kubernetesDeploy(configs:"k8s/deployment.yaml","deploymenyt/service.yaml")
+                    kubernetesDeploy(configs:"K8s/deployment.yaml","K8s/service.yaml")
                 }
             }
         }
