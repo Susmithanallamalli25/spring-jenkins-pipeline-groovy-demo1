@@ -66,6 +66,15 @@
                      }      
                 }
             }
+
+        stage ('Deploy to K8s Cluster'){
+            steps{
+                script{
+                    kubernetesDeploy(configs:"k8s/deployment.yaml","deploymenyt/service.yaml")
+                }
+            }
+        }
+
         }
      
     
