@@ -106,7 +106,7 @@ bat("kubectl apply -f service.yaml")
 
 }
 
-}
+
      
     
 
@@ -127,7 +127,7 @@ bat("kubectl apply -f service.yaml")
 
                 }
             }
- }
+    }
 
             
 

@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: spring-jenkins-ci-cd
-        image: susmithanallamalli123/spring-jenkins-ci-cd
+        image: susmithanallamalli123/spring-jenkins-ci-cd:latest
         ports:
         - containerPort: 8888
